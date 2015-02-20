@@ -127,7 +127,7 @@ class PasteController
             else
             {
                 if($paste->language == 'text' or empty($paste->language))
-                    $highlighted = $paste->content;
+                    $highlighted = '<pre>' . $paste->content . '</pre>';
                 else
                 {
                     $geshi = new \GeSHi($paste->content, $paste->language);
